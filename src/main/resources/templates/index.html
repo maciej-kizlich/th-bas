@@ -23,7 +23,37 @@
 <script>
 	$(function() {
 		$('.map-piece').click(function() {
-			vex.dialog.alert('Wybrałeś miejsce nr: ' + this.id);
+			todayDateString = new Date().toJSON().slice(0, 10)
+			vex.dialog.buttons.YES.text = 'Zarezerwuj'
+			vex.dialog.buttons.NO.text = 'Anuluj'
+
+			
+			vex.dialog.open({
+			    message: 'Wybrałeś miejsce nr: ' + this.id,
+			    input: [
+			        '<style>',
+			            '.vex-custom-field-wrapper {',
+			                'margin: 1em 0;',
+			            '}',
+			            '.vex-custom-field-wrapper > label {',
+			                'display: inline-block;',
+			                'margin-bottom: .2em;',
+			            '}',
+			        '</style>',
+			        '<div> <label>Właściciel:</label> Maciej Kizlich <br /> <label>Nr telefonu:</label> 505 505 505</div>',
+			        '<div class="vex-custom-field-wrapper">',
+			            '<label for="date">Data postoju:</label>',
+			            '<div class="vex-custom-input-wrapper">',
+			                '<input name="date" type="date" value="' + todayDateString + '" />',
+			            '</div>',
+			            '<label for="date">Godzina postoju OD:</label>',
+			            '<div><input type="time" name="usr_time" /> </div>',
+			            '<label for="date">Godzina postoju DO:</label>',
+			            '<div><input type="time" name="usr_time" /> </div>',
+			        '</div>',
+			    ].join(''),
+			})
+		
 		});
 	});
 </script>
