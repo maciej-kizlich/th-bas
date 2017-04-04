@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	layout:decorator="layout">
+<head>
+<title>threeloop | book a spot</title>
+<script src="/js/vex.combined.min.js"></script>
+<script>
+	vex.defaultOptions.className = 'vex-theme-plain'
+</script>
+<link rel="stylesheet" href="/css/vex.css" />
+<link rel="stylesheet" href="/css/vex-theme-plain.css" />
+<script type="text/javascript"
+	src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.map').maphilight({
+			stroke : false
+		});
+	});
+</script>
+<script>
+	$(function() {
+		$('.map-piece').click(function() {
+			vex.dialog.alert('Wybrałeś miejsce nr: ' + this.id);
+		});
+	});
+</script>
+
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1>Witamy w book a spot!</h1>
+		<img class="map" src="/images/roma-lvl2.jpg" border="0" width="1114"
+			height="1000" usemap="#garage"
+			 />
+		<map name="garage" id="ImageMapsCom-image-maps-2017-04-01-132235">
+			<area class="map-piece" id="164"   shape="rect"
+				coords="158,203,225,236" style="outline: none;" target="_self" />
+			<area class="map-piece"  id="163"  shape="rect"
+				coords="159,234,226,267" style="outline: none;" target="_self" />
+			<area class="map-piece"  id="162"  shape="rect"
+				coords="286,204,350,235" style="outline: none;" target="_self" />
+			<area class="map-piece"  id="161"  shape="rect"
+				coords="286,235,350,266" style="outline: none;" target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="162,292,226,323" style="outline: none;" target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="288,279,352,324" style="outline: none;" target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="161,335,225,367" style="outline: none;" target="_self" />
+			<area class="map-piece" id="160"   
+				shape="rect" coords="161,366,225,398" style="outline: none;"
+				target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="285,340,349,372" style="outline: none;" target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="160,410,224,444" style="outline: none;" target="_self" />
+			<area class="map-piece" id="169"   
+				shape="rect" coords="286,411,350,445" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" id="158"   
+				shape="rect" coords="161,443,225,475" style="outline: none;"
+				target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="285,443,349,475" style="outline: none;" target="_self" />
+			<area class="map-piece" id="157"   
+				shape="rect" coords="161,491,225,523" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" id="167"   
+				shape="rect" coords="286,492,350,523" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" id="156"   
+				shape="rect" coords="160,524,224,555" style="outline: none;"
+				target="_self" />
+			<area class="map-piece"    shape="rect"
+				coords="286,523,350,555" style="outline: none;" target="_self" />
+			<area class="map-piece" id="155"   
+				shape="rect" coords="162,565,226,597" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" id="165"   
+				shape="rect" coords="287,567,351,599" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" id="154"   
+				shape="rect" coords="124,600,169,662" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" id="153"   
+				shape="rect" coords="181,599,215,661" style="outline: none;"
+				target="_self" />
+			<area class="map-piece" shape="rect" coords="1112,998,1114,1000" alt="Image Map"
+				style="outline: none;" title="Image Map"
+				href="index.php?aff=mapped_users_84148" />
+		</map>
+	</div>
+</body>
+</html>
